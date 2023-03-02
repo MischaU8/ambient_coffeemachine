@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch [debug]",
+            "type": "lldb",
+            "request": "launch",
+            "program": "ambient",
+            "args": ["run", "--debug"],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "info,wgpu=error,naga=warn,quinn=warn,ambient=error",
+                "MTL_IGNORE_WARNINGS": "1",
+            },
+            "sourceLanguages": [
+                "rust"
+            ]
+        },
+        {
+            "name": "Launch [without debug]",
+            "type": "lldb",
+            "request": "launch",
+            "program": "ambient",
+            "args": ["run"],
+        }
+    ]
+}
